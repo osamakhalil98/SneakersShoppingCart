@@ -57,10 +57,6 @@ export default function Product() {
     if (window.matchMedia("(max-width:375px)").matches) {
       return;
     }
-    const nextIcn = document.querySelector(".next-mobile-icon");
-    nextIcn.classList.add("hidden");
-    const prevIcn = document.querySelector(".prev-mobile-icon");
-    prevIcn.classList.add("hidden");
     // displaying the right image
     const selectedImage = selectedProduct;
     const allSLides = document.querySelectorAll(".slides");

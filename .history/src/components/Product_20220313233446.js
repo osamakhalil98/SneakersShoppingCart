@@ -57,10 +57,6 @@ export default function Product() {
     if (window.matchMedia("(max-width:375px)").matches) {
       return;
     }
-    const nextIcn = document.querySelector(".next-mobile-icon");
-    nextIcn.classList.add("hidden");
-    const prevIcn = document.querySelector(".prev-mobile-icon");
-    prevIcn.classList.add("hidden");
     // displaying the right image
     const selectedImage = selectedProduct;
     const allSLides = document.querySelectorAll(".slides");
@@ -232,12 +228,12 @@ export default function Product() {
       </div>
 
       <img
-        className="next cursor-pointer text-white w-6 next-mobile-icon"
+        className="next cursor-pointer text-white w-6"
         srcSet={next}
         onClick={handleNext}
       ></img>
       <img
-        className="prev cursor-pointer text-white w-6 prev-mobile-icon"
+        className="prev cursor-pointer text-white w-6"
         srcSet={prev}
         onClick={handlePrev}
       ></img>

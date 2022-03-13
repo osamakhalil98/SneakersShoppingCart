@@ -57,10 +57,6 @@ export default function Product() {
     if (window.matchMedia("(max-width:375px)").matches) {
       return;
     }
-    const nextIcn = document.querySelector(".next-mobile-icon");
-    nextIcn.classList.add("hidden");
-    const prevIcn = document.querySelector(".prev-mobile-icon");
-    prevIcn.classList.add("hidden");
     // displaying the right image
     const selectedImage = selectedProduct;
     const allSLides = document.querySelectorAll(".slides");
@@ -99,23 +95,21 @@ export default function Product() {
       } else {
         slides[idx + 1].classList.remove("hidden");
       }
-      return;
-    } else {
-      // getting all img-slides by the attr
-      const allSlides = document.querySelectorAll("[img-slides]");
-      const slides = [...allSlides];
-      let idx = 0;
-      slides.findIndex((slide, index) => {
-        if (!slide.classList.contains("hidden")) {
-          slide.classList.add("hidden");
-          idx = index;
-        }
-      });
-      if (idx === 3) {
-        slides[0].classList.remove("hidden");
-      } else {
-        slides[idx + 1].classList.remove("hidden");
+    }
+    // getting all img-slides by the attr
+    const allSlides = document.querySelectorAll("[img-slides]");
+    const slides = [...allSlides];
+    let idx = 0;
+    slides.findIndex((slide, index) => {
+      if (!slide.classList.contains("hidden")) {
+        slide.classList.add("hidden");
+        idx = index;
       }
+    });
+    if (idx === 3) {
+      slides[0].classList.remove("hidden");
+    } else {
+      slides[idx + 1].classList.remove("hidden");
     }
   };
 
@@ -139,21 +133,19 @@ export default function Product() {
       return;
     }
     // getting all img-slides by the attr
-    else {
-      const allSlides = document.querySelectorAll("[img-slides]");
-      const slides = [...allSlides];
-      let idx = 0;
-      slides.findIndex((slide, index) => {
-        if (!slide.classList.contains("hidden")) {
-          slide.classList.add("hidden");
-          idx = index;
-        }
-      });
-      if (idx === 0) {
-        slides[3].classList.remove("hidden");
-      } else {
-        slides[idx - 1].classList.remove("hidden");
+    const allSlides = document.querySelectorAll("[img-slides]");
+    const slides = [...allSlides];
+    let idx = 0;
+    slides.findIndex((slide, index) => {
+      if (!slide.classList.contains("hidden")) {
+        slide.classList.add("hidden");
+        idx = index;
       }
+    });
+    if (idx === 0) {
+      slides[3].classList.remove("hidden");
+    } else {
+      slides[idx - 1].classList.remove("hidden");
     }
   };
 
@@ -232,12 +224,12 @@ export default function Product() {
       </div>
 
       <img
-        className="next cursor-pointer text-white w-6 next-mobile-icon"
+        className="next cursor-pointer text-white w-6"
         srcSet={next}
         onClick={handleNext}
       ></img>
       <img
-        className="prev cursor-pointer text-white w-6 prev-mobile-icon"
+        className="prev cursor-pointer text-white w-6"
         srcSet={prev}
         onClick={handlePrev}
       ></img>
