@@ -1,0 +1,37 @@
+@import url("https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap");
+
+* {
+  font-size: "Kumbh Sans", sans-serif;
+}
+html {
+  margin-left: 10%;
+  margin-right: 10%;
+}
+
+.main {
+  border: 1px solid red;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+
+/*
+Responsivnesss
+*/
+@media (max-width: 375px) {
+  html {
+    margin: 0;
+  }
+  .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+  }
+}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;

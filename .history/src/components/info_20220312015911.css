@@ -1,0 +1,9 @@
+.cart-logo {
+  background-color: white;
+  -webkit-mask: url("../images/icon-cart.svg") no-repeat center;
+  mask: url("../images/icon-cart.svg") no-repeat center;
+}
+
+.pale-orange:hover {
+  opacity: 0.7;
+}

@@ -1,0 +1,17 @@
+.cart-logo {
+  background-color: white;
+  -webkit-mask: url("../images/icon-cart.svg") no-repeat center;
+  mask: url("../images/icon-cart.svg") no-repeat center;
+}
+
+.pale-orange-plus:hover {
+  background-color: #fb923c;
+  -webkit-mask: url("../images/icon-plus.svg") no-repeat center;
+  mask: url("../images/icon-plus.svg") no-repeat center;
+}
+
+.pale-orange-minus:hover {
+  background-color: #fb923c;
+  -webkit-mask: url("../images/icon-minus.svg") no-repeat center;
+  mask: url("../images/icon-minus.svg") no-repeat center;
+}

@@ -1,0 +1,26 @@
+@import url("https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap");
+
+* {
+  font-size: "Kumbh Sans", sans-serif;
+}
+html {
+  margin-left: 10%;
+  margin-right: 10%;
+}
+
+.main {
+  border: 1px solid red;
+}
+.cart-btn {
+  box-shadow: rgba(23, 95%, 52%) 0px 20px 25px -5px,
+    rgba(23, 95%, 52%) 0px 10px 10px -5px;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;

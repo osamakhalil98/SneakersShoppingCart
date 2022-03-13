@@ -1,0 +1,36 @@
+@import url("https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap");
+
+* {
+  font-family: "Kumbh Sans", sans-serif;
+}
+html {
+  margin-left: 10%;
+  margin-right: 10%;
+}
+
+.main {
+  border: 1px solid red;
+}
+
+/*
+Responsivnesss
+*/
+@media (max-width: 375px) {
+  html {
+    margin-left: 0;
+    margin-right: 0;
+  }
+  .container {
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    min-width: 100vw;
+    justify-content: center;
+    align-content: center;
+    background-color: red;
+  }
+}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;

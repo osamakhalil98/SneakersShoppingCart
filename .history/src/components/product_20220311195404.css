@@ -1,0 +1,4 @@
+.selected-product {
+  border: 3px solid orange;
+  opacity: 0.5;
+}
